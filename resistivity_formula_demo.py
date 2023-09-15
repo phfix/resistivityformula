@@ -49,6 +49,28 @@ class MainWindow(QtWidgets.QMainWindow):
             "Loam (Dry)": 5e5,  # Taking an average between the provided range
             "Loam (Saturated)": 175,  # Taking an average between the provided range
             "Peat": 255,  # Taking an average between the provided range
+            "Limestone (low)": 1e2,  # Ohm·m
+            "Limestone (high)": 1e8,  # Ohm·m
+            "Sandstone (low)": 1e2,  # Ohm·m
+            "Sandstone (high)": 1e7,  # Ohm·m
+            "Shale (low)": 1e-2,  # Ohm·m
+            "Shale (high)": 1e2,  # Ohm·m
+            "Granite (low)": 1e4,  # Ohm·m
+            "Granite (high)": 1e6,  # Ohm·m
+            "Basalt (low)": 1e1,  # Ohm·m
+            "Basalt (high)": 1e4,  # Ohm·m
+            "Gneiss (low)": 1e3,  # Ohm·m
+            "Gneiss (high)": 1e5,  # Ohm·m
+            "Marble (low)": 1e5,  # Ohm·m
+            "Marble (high)": 1e8,  # Ohm·m
+            "Quartzite (low)": 1e5,  # Ohm·m
+            "Quartzite (high)": 1e9,  # Ohm·m
+            "Dolomite (low)": 1e2,  # Ohm·m
+            "Dolomite (high)": 1e6,  # Ohm·m
+            "Salt (low)": 1e7,  # Ohm·m
+            "Salt (high)": 1e9,  # Ohm·m
+            "Slate (low)": 1e3,  # Ohm·m
+            "Slate (high)": 1e6,  # Ohm·m
         }
 
         # Frame to hold the VTK render window and Qt controls
@@ -79,8 +101,8 @@ class MainWindow(QtWidgets.QMainWindow):
         )  # This makes sure the "top" of the view is along the Z-axis
         self.ren.ResetCamera()
 
-        #self.resistance_label = QtWidgets.QLabel("Resistance: N/A")
-        #vbox.addWidget(self.resistance_label)
+        # self.resistance_label = QtWidgets.QLabel("Resistance: N/A")
+        # vbox.addWidget(self.resistance_label)
 
         self.formula_display = QtWidgets.QLabel()
         vbox.addWidget(self.formula_display)
@@ -155,7 +177,7 @@ class MainWindow(QtWidgets.QMainWindow):
         """
 
         self.formula_display.setText(formula_html)
-        #self.resistance_label.setText(f"Resistance: {resistance:.2e} ohms")
+        # self.resistance_label.setText(f"Resistance: {resistance:.2e} ohms")
 
     # def update_resistance(self):
     #    resistance = self.calculate_resistance()
