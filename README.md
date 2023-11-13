@@ -12,3 +12,5 @@ pip install PyQt5 vtk numpy
 # More
 Application created from a dialog with ChatGpt.
 
+
+[Youtube about  Resistance vs resistivity ](https://youtu.be/IWTyLsvQmxE?si=cMvI3gjfuF76TWE_)https://youtu.be/IWTyLsvQmxE?si=cMvI3gjfuF76TWE_)
